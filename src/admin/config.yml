@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: BradleyMatera/bossen-inc-website
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+publish_mode: editorial_workflow
+
+site_url: https://bossen-inc-website.netlify.app
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layout" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Canonical URL", name: "canonical", widget: "string", required: false }
+      - { label: "Include Forms JS", name: "include_forms_js", widget: "boolean", default: false, required: false }
+      - { label: "Use Netlify Identity", name: "use_netlify_identity", widget: "boolean", default: false, required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "src/_data/site.json"
+        label: "Business Info"
+        name: "site"
+        fields:
+          - { label: "Business Name", name: "name", widget: "string" }
+          - { label: "Owner", name: "owner", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "USDOT", name: "usdot", widget: "string" }
+          - { label: "MC Number", name: "mc", widget: "string" }
+          - { label: "Status", name: "status", widget: "string" }
+          - { label: "Footer Note", name: "footer_note", widget: "string" }

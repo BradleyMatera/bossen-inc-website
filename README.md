@@ -4,38 +4,24 @@ This is the complete launch package for BOSSEN INC, a Rockford, Illinois based t
 
 ## Project Structure
 
-- `public/` — The live website. All HTML pages, CSS, JS, and images go here.
+- `src/` — Source files for the website.
+  - `src/pages/` — One Markdown file per page. Paul can edit these through the CMS.
+  - `src/_includes/` — HTML layout templates.
+  - `src/_data/` — Global data like business info, phone, USDOT, MC.
+  - `src/assets/` — CSS, JavaScript, and images.
+  - `src/admin/` — Decap CMS admin files.
 - `brand/` — Business strategy, questionnaire, SEO plan, and 90-day launch plan.
-- `README.md` — This file.
+- `_site/` — Generated static site (do not edit; created by 11ty).
+- `netlify.toml` — Netlify build settings.
+- `.github/workflows/deploy-pages.yml` — Auto-deploys to GitHub Pages.
 
-## Key Files
+## Content Management System (CMS)
 
-- `public/index.html` — Homepage with trust bar, service grid, and emergency CTA.
-- `public/truck-repair.html` — Truck & trailer repair services.
-- `public/rebuilds.html` — Complete rebuilds and major replacements.
-- `public/roadside-service.html` — Mobile roadside flow with large click-to-call.
-- `public/medium-duty.html` — Medium-duty commercial vehicle service.
-- `public/parking.html` — Truck & trailer parking availability and inquiry form.
-- `public/freight.html` — Freight quote request and verified carrier info.
-- `public/fleet-service.html` — Fleet maintenance and support.
-- `public/about.html` — About Paul and BOSSEN INC (framework).
-- `public/contact.html` — Contact paths and general service form.
-- `public/privacy.html`, `terms.html`, `disclaimer.html`, `parking-terms.html`, `sms-consent.html` — Legal placeholders.
+The site uses **Decap CMS** (formerly Netlify CMS). It is a free, Git-based CMS with a simple editor for Paul.
 
-## Brand & Planning Documents
-
-- `brand/business-summary.md` — Confirmed/unconfirmed facts and positioning.
-- `brand/questionnaire.md` — Interview questions for Paul.
-- `brand/seo-plan.md` — Local SEO keywords, structured data, and Google Business Profile plan.
-- `brand/launch-plan.md` — Brand concepts, slogans, sitemap, 90-day launch plan, tech stack.
-
-## Technology Stack
-
-- Static HTML5, CSS3, vanilla JavaScript
-- Mobile-first, accessible, semantic markup
-- Google Fonts (Inter)
-- Form handling currently a placeholder; connect to Netlify Forms, Formspree, or custom backend
-- Host on Cloudflare Pages, Netlify, or Vercel
+- **Admin URL:** `https://bossen-inc-cms.netlify.app/admin/`
+- Paul logs in, edits pages, and clicks "Publish" — changes are saved to the GitHub repo and the site rebuilds.
+- **Important:** Netlify Identity and Git Gateway must be enabled before Paul can log in. See setup instructions below.
 
 ## Verified Information
 
@@ -62,27 +48,52 @@ The following must be confirmed with Paul before launch:
 - Warranty terms and legal policies
 - Real photos and logo
 
-## How to Test Locally
+## Development
 
 ```bash
-cd public
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Open http://localhost:8080 in a browser.
+The local dev server will start at `http://localhost:8080`.
 
-## Next Steps
+## Build
 
-1. Have Paul complete the questionnaire in `brand/questionnaire.md`.
-2. Replace all placeholder phone numbers (`+1-000-000-0000`) with the real number.
-3. Confirm services and remove placeholder boxes.
-4. Add real photos to `public/assets/images/` and update image references.
-5. Connect forms to a real service (Netlify Forms, Formspree, or custom backend).
-6. Set up Google Business Profile, Bing Places, Apple Business Connect, Facebook, LinkedIn, and Yelp.
-7. Submit site to Google Search Console and Google Analytics.
-8. Have legal counsel review privacy policy, terms, and disclaimers.
+```bash
+npm run build
+```
 
-## Notes
+The site is generated in `_site/`.
+
+## Deployments
+
+- **Production:** GitHub Pages — `https://bradleymatera.github.io/bossen-inc-website/`
+- **Dev/Preview:** Vercel — `https://bossen-inc-dev.vercel.app`
+- **CMS Admin:** Netlify — `https://bossen-inc-cms.netlify.app/admin/`
+
+## How to Finish CMS Setup
+
+1. Open the Netlify admin dashboard: `https://app.netlify.com/sites/bossen-inc-cms/identity`
+2. Click **Enable Identity**.
+3. Go to **Identity → Services → Git Gateway** and click **Enable Git Gateway**.
+4. Invite Paul as an Identity user.
+5. Paul can then log in at `https://bossen-inc-cms.netlify.app/admin/`.
+
+## Editing the Site
+
+### For Paul (non-technical)
+
+1. Go to `https://bossen-inc-cms.netlify.app/admin/`
+2. Log in with the email invitation.
+3. Click a page in the "Pages" collection.
+4. Edit text, phone numbers, or content.
+5. Click **Publish** to save changes.
+
+### For developers
+
+Edit files in `src/` or `src/_data/site.json` and push to `main`. GitHub Actions will rebuild and deploy to GitHub Pages.
+
+## Legal & Compliance Notes
 
 - Do not invent certifications, experience, warranties, testimonials, or facilities.
 - Do not present the “91 Excellent” third-party score as an official FMCSA safety rating.

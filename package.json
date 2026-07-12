@@ -1,0 +1,32 @@
+{
+  "name": "bossen-inc-website",
+  "version": "1.0.0",
+  "description": "BOSSEN INC website with Decap CMS for easy editing by Paul.",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --watch",
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradleyMatera/bossen-inc-website.git"
+  },
+  "keywords": [
+    "bossen-inc",
+    "trucking",
+    "repair",
+    "parking",
+    "rockford"
+  ],
+  "author": "BOSSEN INC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BradleyMatera/bossen-inc-website/issues"
+  },
+  "homepage": "https://github.com/BradleyMatera/bossen-inc-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "netlify-cli": "^17.0.0"
+  }
+}

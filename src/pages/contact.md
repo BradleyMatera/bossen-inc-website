@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact BOSSEN INC | Rockford IL Truck Repair, Roadside, Parking, Freight</title>
-  <meta name="description" content="Contact BOSSEN INC for roadside assistance, repair estimates, parking, freight quotes, and fleet service in Rockford, Illinois.">
-  <link rel="canonical" href="https://bosseninc.com/contact.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+---
+layout: layout
+permalink: /contact/
+title: Contact BOSSEN INC | Rockford IL Truck Repair, Roadside, Parking, Freight
+description: Contact BOSSEN INC for roadside assistance, repair estimates, parking, freight quotes, and fleet service in Rockford, Illinois.
+canonical: https://bosseninc.com/contact/
+include_forms_js: true
+---
 
-  <header role="banner">
-    <div class="header-inner">
-      <a class="logo" href="index.html">BOSSEN <span>INC</span></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">MENU</button>
-      <nav id="primary-nav" role="navigation" aria-label="Primary navigation">
-        <a href="truck-repair.html">Repair</a>
-        <a href="rebuilds.html">Rebuilds</a>
-        <a href="roadside-service.html">Roadside</a>
-        <a href="medium-duty.html">Medium Duty</a>
-        <a href="parking.html">Parking</a>
-        <a href="freight.html">Freight</a>
-        <a href="fleet-service.html">Fleet</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="header-phone" href="tel:+10000000000" data-placeholder="true">Call Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="page-header">
+<section class="page-header">
       <h1>Contact BOSSEN INC</h1>
       <p>Choose the right path for your need. For emergencies, call directly.</p>
     </section>
@@ -60,17 +33,17 @@
           <div class="service-card">
             <h3>Parking Inquiry</h3>
             <p>Ask about tractor, trailer, or combo parking.</p>
-            <a class="btn btn-primary" href="parking.html">Parking Form</a>
+            <a class="btn btn-primary" href="/parking/">Parking Form</a>
           </div>
           <div class="service-card">
             <h3>Freight Quote</h3>
             <p>General freight or machinery transportation quote.</p>
-            <a class="btn btn-primary" href="freight.html">Freight Quote</a>
+            <a class="btn btn-primary" href="/freight/">Freight Quote</a>
           </div>
           <div class="service-card">
             <h3>Fleet Service</h3>
             <p>Maintenance plans and fleet support.</p>
-            <a class="btn btn-primary" href="fleet-service.html">Fleet Discussion</a>
+            <a class="btn btn-primary" href="/fleet-service/">Fleet Discussion</a>
           </div>
         </div>
 
@@ -141,45 +114,3 @@
         </form>
       </div>
     </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <h4>BOSSEN INC</h4>
-        <p>Rockford, Illinois area</p>
-        <p>USDOT 3358683</p>
-        <p>MC-1075161</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="truck-repair.html">Repair</a>
-        <a href="rebuilds.html">Rebuilds</a>
-        <a href="roadside-service.html">Roadside</a>
-        <a href="parking.html">Parking</a>
-        <a href="freight.html">Freight</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="fleet-service.html">Fleet</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="parking-terms.html">Parking Terms</a>
-        <a href="sms-consent.html">SMS Consent</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 BOSSEN INC. FMCSA registration is not an endorsement.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/forms.js"></script>
-</body>
-</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default('BOSSEN INC') | safe }}</title>
+  <meta name="description" content="{{ description | default('BOSSEN INC is a Rockford, Illinois based trucking, repair, roadside service, and truck parking company.') | safe }}">
+  <link rel="canonical" href="{{ canonical | default('https://bosseninc.com/') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  {% if use_netlify_identity %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner">
+    <div class="header-inner">
+      <a class="logo" href="/">BOSSEN <span>INC</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">MENU</button>
+      <nav id="primary-nav" role="navigation" aria-label="Primary navigation">
+        <a href="/truck-repair/">Repair</a>
+        <a href="/rebuilds/">Rebuilds</a>
+        <a href="/roadside-service/">Roadside</a>
+        <a href="/medium-duty/">Medium Duty</a>
+        <a href="/parking/">Parking</a>
+        <a href="/freight/">Freight</a>
+        <a href="/fleet-service/">Fleet</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a class="header-phone" href="tel:{{ site.phone | replace(' ', '') | replace('-', '') | default('+10000000000') }}" data-placeholder="{{ site.phone_placeholder }}">Call Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>BOSSEN INC</h4>
+        <p>{{ site.location | default('Rockford, Illinois area') }}</p>
+        <p>USDOT {{ site.usdot | default('3358683') }}</p>
+        <p>MC-{{ site.mc | default('1075161') }}</p>
+        <p>{{ site.status | default('Active interstate carrier') }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/truck-repair/">Truck & Trailer Repair</a>
+        <a href="/rebuilds/">Rebuilds</a>
+        <a href="/roadside-service/">Roadside Service</a>
+        <a href="/parking/">Parking</a>
+        <a href="/freight/">Freight</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/fleet-service/">Fleet</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+        <a href="/parking-terms/">Parking Terms</a>
+        <a href="/sms-consent/">SMS Consent</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {% year %} BOSSEN INC. {{ site.footer_note | default('FMCSA registration is not an endorsement.') }}</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  {% if include_forms_js %}
+  <script src="/assets/js/forms.js"></script>
+  {% endif %}
+  {% if use_netlify_identity %}
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  {% endif %}
+</body>
+</html>

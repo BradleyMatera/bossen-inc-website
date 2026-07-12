@@ -1,74 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOSSEN INC | Truck Repair, Roadside Service, Parking & Freight | Rockford, IL</title>
-  <meta name="description" content="BOSSEN INC is a Rockford, Illinois based trucking, repair, roadside service, and truck parking company. Active interstate carrier USDOT 3358683 MC-1075161.">
-  <link rel="canonical" href="https://bosseninc.com/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+---
+layout: layout
+permalink: /
+title: BOSSEN INC | Truck Repair, Roadside Service, Parking & Freight | Rockford, IL
+description: BOSSEN INC is a Rockford, Illinois based trucking, repair, roadside service, and truck parking company. Active interstate carrier USDOT 3358683 MC-1075161.
+canonical: https://bosseninc.com/
+use_netlify_identity: true
+---
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "BOSSEN INC",
-    "description": "Commercial truck and trailer repair, roadside service, parking, and freight transportation based in Rockford, Illinois.",
-    "url": "https://bosseninc.com",
-    "telephone": "+1-000-000-0000",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rockford",
-      "addressRegion": "IL",
-      "addressCountry": "US"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Paul Maksim"
-    },
-    "additionalProperty": [
-      { "@type": "PropertyValue", "name": "USDOT", "value": "3358683" },
-      { "@type": "PropertyValue", "name": "MC Number", "value": "MC-1075161" }
-    ],
-    "sameAs": [
-      "https://safer.fmcsa.dot.gov/",
-      "https://www.google.com/business/"
-    ]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header role="banner">
-    <div class="header-inner">
-      <a class="logo" href="index.html">BOSSEN <span>INC</span></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">MENU</button>
-      <nav id="primary-nav" role="navigation" aria-label="Primary navigation">
-        <a href="truck-repair.html">Repair</a>
-        <a href="rebuilds.html">Rebuilds</a>
-        <a href="roadside-service.html">Roadside</a>
-        <a href="medium-duty.html">Medium Duty</a>
-        <a href="parking.html">Parking</a>
-        <a href="freight.html">Freight</a>
-        <a href="fleet-service.html">Fleet</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="header-phone" href="tel:+10000000000" data-placeholder="true">Call Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
+<section class="hero">
       <h1>Freight, Repairs, Roadside Service & Secure Truck Parking</h1>
       <p>BOSSEN INC is a Rockford, Illinois based trucking and commercial vehicle service company. We keep trucks, trailers, and local businesses moving.</p>
       <div class="hero-actions">
-        <a class="btn btn-danger btn-large" href="roadside-service.html">Call for Roadside Service</a>
-        <a class="btn btn-primary btn-large" href="contact.html">Request Service or Parking</a>
+        <a class="btn btn-danger btn-large" href="/roadside-service/">Call for Roadside Service</a>
+        <a class="btn btn-primary btn-large" href="/contact/">Request Service or Parking</a>
       </div>
     </section>
 
@@ -102,49 +46,49 @@
           <div class="service-card">
             <h3>Truck & Trailer Repair</h3>
             <p>Mechanical, electrical, brake, air, lighting, suspension, and structural repairs for commercial trucks and trailers.</p>
-            <a class="btn btn-primary" href="truck-repair.html">Repair Details</a>
+            <a class="btn btn-primary" href="/truck-repair/">Repair Details</a>
           </div>
 
           <div class="service-card">
             <h3>Complete Rebuilds</h3>
             <p>Major component replacement, reconditioning, partial rebuilds, and full restoration of trucks and trailers.</p>
-            <a class="btn btn-primary" href="rebuilds.html">Rebuild Details</a>
+            <a class="btn btn-primary" href="/rebuilds/">Rebuild Details</a>
           </div>
 
           <div class="service-card">
             <h3>Mobile Roadside Service</h3>
             <p>Get help when a truck or trailer is down on the road. Call, tell us what happened, and we’ll get moving.</p>
-            <a class="btn btn-danger" href="roadside-service.html">Call Roadside</a>
+            <a class="btn btn-danger" href="/roadside-service/">Call Roadside</a>
           </div>
 
           <div class="service-card">
             <h3>Medium-Duty Service</h3>
             <p>Service calls for box trucks, delivery trucks, landscape trucks, utility vehicles, and small commercial fleets.</p>
-            <a class="btn btn-primary" href="medium-duty.html">Medium Duty</a>
+            <a class="btn btn-primary" href="/medium-duty/">Medium Duty</a>
           </div>
 
           <div class="service-card">
             <h3>Truck & Trailer Parking</h3>
             <p>Secure parking for tractors, trailers, and tractor-trailer combinations near Rockford, Illinois.</p>
-            <a class="btn btn-primary" href="parking.html">Check Parking</a>
+            <a class="btn btn-primary" href="/parking/">Check Parking</a>
           </div>
 
           <div class="service-card">
             <h3>Freight & Transportation</h3>
             <p>General freight and machinery / large-object transportation across state lines as an active interstate carrier.</p>
-            <a class="btn btn-primary" href="freight.html">Freight Quote</a>
+            <a class="btn btn-primary" href="/freight/">Freight Quote</a>
           </div>
 
           <div class="service-card">
             <h3>Fleet Service</h3>
             <p>Scheduled maintenance, recurring inspections, priority repair scheduling, and multi-vehicle planning for local fleets.</p>
-            <a class="btn btn-primary" href="fleet-service.html">Fleet Details</a>
+            <a class="btn btn-primary" href="/fleet-service/">Fleet Details</a>
           </div>
 
           <div class="service-card">
             <h3>About Paul & BOSSEN INC</h3>
             <p>Meet the working owner behind the company and learn why drivers and businesses in the Rockford area trust us.</p>
-            <a class="btn btn-secondary" href="about.html">Our Story</a>
+            <a class="btn btn-secondary" href="/about/">Our Story</a>
           </div>
         </div>
       </div>
@@ -208,48 +152,5 @@
       <h2>Ready to Get Moving?</h2>
       <p>Call for immediate roadside help, request a repair quote, or ask about parking availability.</p>
       <a class="btn btn-danger btn-large" href="tel:+10000000000" data-placeholder="true">Call Roadside</a>
-      <a class="btn btn-primary btn-large" href="contact.html">Request Service</a>
+      <a class="btn btn-primary btn-large" href="/contact/">Request Service</a>
     </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <h4>BOSSEN INC</h4>
-        <p>Rockford, Illinois area</p>
-        <p>USDOT 3358683</p>
-        <p>MC-1075161</p>
-        <p>Active interstate carrier</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="truck-repair.html">Truck & Trailer Repair</a>
-        <a href="rebuilds.html">Rebuilds</a>
-        <a href="roadside-service.html">Roadside Service</a>
-        <a href="parking.html">Parking</a>
-        <a href="freight.html">Freight</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About Paul</a>
-        <a href="fleet-service.html">Fleet Service</a>
-        <a href="medium-duty.html">Medium Duty</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="disclaimer.html">Service Disclaimer</a>
-        <a href="parking-terms.html">Parking Terms</a>
-        <a href="sms-consent.html">SMS Consent</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 BOSSEN INC. All rights reserved. FMCSA registration is not an endorsement.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
