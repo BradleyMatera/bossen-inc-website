@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact BOSSEN INC | Rockford IL Truck Repair, Roadside, Parking, Freight</title>
+  <meta name="description" content="Contact BOSSEN INC for roadside assistance, repair estimates, parking, freight quotes, and fleet service in Rockford, Illinois.">
+  <link rel="canonical" href="https://bosseninc.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner">
+    <div class="header-inner">
+      <a class="logo" href="index.html">BOSSEN <span>INC</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">MENU</button>
+      <nav id="primary-nav" role="navigation" aria-label="Primary navigation">
+        <a href="truck-repair.html">Repair</a>
+        <a href="rebuilds.html">Rebuilds</a>
+        <a href="roadside-service.html">Roadside</a>
+        <a href="medium-duty.html">Medium Duty</a>
+        <a href="parking.html">Parking</a>
+        <a href="freight.html">Freight</a>
+        <a href="fleet-service.html">Fleet</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="header-phone" href="tel:+10000000000" data-placeholder="true">Call Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <h1>Contact BOSSEN INC</h1>
+      <p>Choose the right path for your need. For emergencies, call directly.</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Roadside Assistance</h3>
+            <p>Stuck on the road? Call first. Do not wait for a form response.</p>
+            <a class="btn btn-danger" href="tel:+10000000000" data-placeholder="true">Call Roadside</a>
+          </div>
+          <div class="service-card">
+            <h3>Repair Appointment</h3>
+            <p>Schedule a repair, inspection, or diagnostic.</p>
+            <a class="btn btn-primary" href="#service-form">Request Repair</a>
+          </div>
+          <div class="service-card">
+            <h3>Rebuild Estimate</h3>
+            <p>Major component replacement or complete rebuild.</p>
+            <a class="btn btn-primary" href="#service-form">Request Rebuild</a>
+          </div>
+          <div class="service-card">
+            <h3>Parking Inquiry</h3>
+            <p>Ask about tractor, trailer, or combo parking.</p>
+            <a class="btn btn-primary" href="parking.html">Parking Form</a>
+          </div>
+          <div class="service-card">
+            <h3>Freight Quote</h3>
+            <p>General freight or machinery transportation quote.</p>
+            <a class="btn btn-primary" href="freight.html">Freight Quote</a>
+          </div>
+          <div class="service-card">
+            <h3>Fleet Service</h3>
+            <p>Maintenance plans and fleet support.</p>
+            <a class="btn btn-primary" href="fleet-service.html">Fleet Discussion</a>
+          </div>
+        </div>
+
+        <div class="placeholder" style="margin-top:2rem;">
+          <strong>Placeholder:</strong> Phone number, email, address, and hours will be added once Paul confirms them.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="service-form">
+      <div class="container">
+        <h2 class="section-title">General Service Request</h2>
+        <p class="section-subtitle">Tell us what you need and we will call you back. For roadside emergencies, call directly.</p>
+
+        <form id="contact-form" action="" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Your name <span aria-label="required">*</span></label>
+              <input type="text" id="c-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone <span aria-label="required">*</span></label>
+              <input type="tel" id="c-phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="c-company">Company</label>
+              <input type="text" id="c-company" name="company">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-type">What do you need? <span aria-label="required">*</span></label>
+            <select id="c-type" name="inquiry_type" required>
+              <option value="">Select one</option>
+              <option value="repair">Truck/trailer repair</option>
+              <option value="rebuild">Rebuild estimate</option>
+              <option value="roadside">Non-emergency roadside</option>
+              <option value="parking">Parking inquiry</option>
+              <option value="freight">Freight quote</option>
+              <option value="fleet">Fleet service</option>
+              <option value="general">General question</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-unit">Vehicle or unit info</label>
+            <input type="text" id="c-unit" name="unit" placeholder="Year, make, model, trailer type, or fleet size">
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Describe your request <span aria-label="required">*</span></label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by phone, text, or email about this request.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+          <div class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>BOSSEN INC</h4>
+        <p>Rockford, Illinois area</p>
+        <p>USDOT 3358683</p>
+        <p>MC-1075161</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="truck-repair.html">Repair</a>
+        <a href="rebuilds.html">Rebuilds</a>
+        <a href="roadside-service.html">Roadside</a>
+        <a href="parking.html">Parking</a>
+        <a href="freight.html">Freight</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="fleet-service.html">Fleet</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="parking-terms.html">Parking Terms</a>
+        <a href="sms-consent.html">SMS Consent</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BOSSEN INC. FMCSA registration is not an endorsement.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>
