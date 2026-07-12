@@ -28,5 +28,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "netlify-cli": "^17.0.0"
+  },
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "nodemailer": "^9.0.3"
   }
 }

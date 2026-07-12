@@ -15,6 +15,11 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/pages/*.md");
   });
 
+  // Make markdown recognize <form> and other tags as block-level
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.set({ html: true, breaks: false, linkify: true });
+  });
+
   return {
     dir: {
       input: "src",

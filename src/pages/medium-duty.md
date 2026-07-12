@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 layout: layout
 permalink: /medium-duty/
 title: Medium Duty Truck Service Rockford IL | BOSSEN INC

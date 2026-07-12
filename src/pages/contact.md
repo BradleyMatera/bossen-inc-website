@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 layout: layout
 permalink: /contact/
 title: Contact BOSSEN INC | Rockford IL Truck Repair, Roadside, Parking, Freight
@@ -58,7 +59,14 @@ include_forms_js: true
         <h2 class="section-title">General Service Request</h2>
         <p class="section-subtitle">Tell us what you need and we will call you back. For roadside emergencies, call directly.</p>
 
-        <form id="contact-form" action="" method="POST">
+        <form id="contact-form" action="https://bossen-inc-cms.netlify.app/.netlify/functions/form-submit" method="POST">
+          <input type="hidden" name="form_type" value="general-service">
+          <input type="hidden" name="redirect" value="/thank-you/">
+          <input type="hidden" name="form-name" value="general-service">
+          <div class="visually-hidden">
+            <label>Do not fill this in if you are human <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="c-name">Your name <span aria-label="required">*</span></label>

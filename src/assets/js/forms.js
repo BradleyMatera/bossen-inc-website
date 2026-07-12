@@ -1,4 +1,4 @@
-// BOSSEN INC — form validation and lead handling
+// BOSSEN INC — client-side form validation before submitting to the backend
 (function () {
   'use strict';
 
@@ -44,36 +44,19 @@
 
   document.querySelectorAll('form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
       if (!validateRequired(form)) {
+        e.preventDefault();
         showStatus(form, 'Please fill in all required fields correctly.', 'error');
         return;
       }
 
-      const data = new FormData(form);
-      const payload = {};
-      data.forEach(function (value, key) {
-        if (payload[key]) {
-          if (!Array.isArray(payload[key])) payload[key] = [payload[key]];
-          payload[key].push(value);
-        } else {
-          payload[key] = value;
-        }
+      // Clear any previous error styling
+      form.querySelectorAll('[style*="border-color"]').forEach(function (field) {
+        field.style.borderColor = '';
       });
 
-      // Placeholder form handler: replace with real endpoint
-      showStatus(
-        form,
-        'Thanks for your request. This is a demo form; we still need to connect it to a real email/CRM service. We will follow up with you soon.',
-        'success'
-      );
-
-      // Reset form
-      form.reset();
-
-      // Optional: send to real endpoint later
-      // fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' } });
+      showStatus(form, 'Sending your request...', 'success');
+      // The form will now submit to the backend normally.
     });
   });
 })();

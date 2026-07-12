@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 layout: layout
 permalink: /roadside-service/
 title: Mobile Roadside Truck Service Rockford | BOSSEN INC
@@ -120,7 +121,14 @@ include_forms_js: true
         <h2 class="section-title">Roadside Assistance Form</h2>
         <p class="section-subtitle">This form is for non-emergency roadside requests. For emergencies, <strong>call first</strong>.</p>
 
-        <form id="roadside-form" action="" method="POST">
+        <form id="roadside-form" action="https://bossen-inc-cms.netlify.app/.netlify/functions/form-submit" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="form_type" value="roadside">
+          <input type="hidden" name="redirect" value="/thank-you/">
+          <input type="hidden" name="form-name" value="roadside">
+          <div class="visually-hidden">
+            <label>Do not fill this in if you are human <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Your name <span aria-label="required">*</span></label>

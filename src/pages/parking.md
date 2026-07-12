@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 layout: layout
 permalink: /parking/
 title: Truck & Trailer Parking Rockford IL | BOSSEN INC
@@ -121,7 +122,14 @@ include_forms_js: true
         <h2 class="section-title">Parking Inquiry</h2>
         <p class="section-subtitle">Fill out the form and we will call you back to confirm availability and pricing.</p>
 
-        <form id="parking-form" action="" method="POST">
+        <form id="parking-form" action="https://bossen-inc-cms.netlify.app/.netlify/functions/form-submit" method="POST">
+          <input type="hidden" name="form_type" value="parking">
+          <input type="hidden" name="redirect" value="/thank-you/">
+          <input type="hidden" name="form-name" value="parking">
+          <div class="visually-hidden">
+            <label>Do not fill this in if you are human <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="p-name">Driver or company name <span aria-label="required">*</span></label>

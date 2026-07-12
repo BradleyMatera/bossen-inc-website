@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 layout: layout
 permalink: /freight/
 title: Freight & Transportation Rockford IL | BOSSEN INC
@@ -43,7 +44,14 @@ include_forms_js: true
       <h2>Freight Quote</h2>
       <p>Send us the details and we will respond with availability and pricing.</p>
 
-      <form id="freight-form" action="" method="POST">
+      <form id="freight-form" action="https://bossen-inc-cms.netlify.app/.netlify/functions/form-submit" method="POST">
+          <input type="hidden" name="form_type" value="freight">
+          <input type="hidden" name="redirect" value="/thank-you/">
+          <input type="hidden" name="form-name" value="freight">
+          <div class="visually-hidden">
+            <label>Do not fill this in if you are human <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </div>
+
         <div class="form-row">
           <div class="form-group">
             <label for="f-pickup">Pickup location <span aria-label="required">*</span></label>
