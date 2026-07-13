@@ -68,8 +68,21 @@ The site is generated in `_site/`.
 ## Deployments
 
 - **Production:** GitHub Pages — `https://bradleymatera.github.io/bossen-inc-website/`
-- **Dev/Preview:** Vercel — `https://bossen-inc-dev.vercel.app`
+- **Dev/Preview:** Vercel — `https://paul-maksim.vercel.app`
 - **CMS Admin:** Netlify — `https://bossen-inc-cms.netlify.app/admin/`
+
+## Form Backend
+
+All forms submit to a real backend at `https://bossen-inc-cms.netlify.app/.netlify/functions/form-submit`.
+
+- The backend validates required fields, checks a honeypot field for spam, and sends a clear email with all details.
+- Emails go to `pavelmiksim22@gmail.com`.
+- A `thank-you` page confirms the request.
+- File uploads (e.g., roadside photos) can be attached.
+
+### Required environment variable
+
+Set the `EMAIL_PASS` environment variable in the Netlify dashboard to a Gmail App Password for `pavelmiksim22@gmail.com`. Everything else is already configured.
 
 ## How to Finish CMS Setup
 
